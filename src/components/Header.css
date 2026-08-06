@@ -12,8 +12,8 @@
 .hdr-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
 .hdr-mark{
   width:30px;height:30px;border-radius:8px;flex:0 0 auto;display:grid;place-items:center;
-  background:linear-gradient(150deg,#2DD4BF,#14B8A6);
-  box-shadow:0 0 0 1px rgba(45,212,191,.25), 0 6px 16px -6px rgba(45,212,191,.5);
+  background:linear-gradient(150deg,#FF6600,#E65C00);
+  box-shadow:0 0 0 1px rgba(255,102,0,.25), 0 6px 16px -6px rgba(255,102,0,.5);
 }
 .hdr-name{display:flex;flex-direction:column;line-height:1.05}
 .hdr-name b{font-family:"Space Grotesk";font-weight:600;font-size:15px;letter-spacing:-.01em}

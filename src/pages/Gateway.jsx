@@ -32,7 +32,7 @@ const initialPolicies = [
   { id: 'mtls', name: 'Mutual TLS', desc: 'Upstream client certificates', on: false, stat: 'off' },
   { id: 'iplist', name: 'IP allowlist', desc: 'Restrict inbound CIDR ranges', on: false, stat: 'off' },
 ]
-const blueViolet = ['#5B9DFF', '#2DD4BF', '#A78BFA', '#34D399']
+const blueViolet = ['#5B9DFF', '#FF6600', '#A78BFA', '#34D399']
 
 export default function Gateway() {
   const [policies, setPolicies] = useState(initialPolicies)

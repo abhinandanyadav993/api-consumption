@@ -28,7 +28,7 @@ export default function Header() {
       </button>
 
       <NavLink to="/" className="hdr-brand" onClick={() => setNavOpen(false)}>
-        <span className="hdr-mark"><Logo size={17} color="#04201C" /></span>
+        <span className="hdr-mark"><Logo size={17} color="#FFFFFF" /></span>
         <span className="hdr-name">
           <b>Card Console</b>
           <small>Digital · Stellar</small>

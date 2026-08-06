@@ -5,7 +5,7 @@
 .prof-cover{
   height:120px;
   background:
-    radial-gradient(600px 200px at 80% -20%, rgba(45,212,191,.28), transparent 60%),
+    radial-gradient(600px 200px at 80% -20%, rgba(255,102,0,.28), transparent 60%),
     radial-gradient(500px 220px at 10% 120%, rgba(91,157,255,.22), transparent 60%),
     linear-gradient(120deg,#122a2b,#141b2a);
   position:relative;
@@ -22,7 +22,7 @@
   display:grid;place-items:center;font-family:"Space Grotesk";font-weight:600;font-size:30px;color:var(--text-hi);
   border:3px solid var(--bg);box-shadow:0 12px 28px -12px rgba(0,0,0,.7);
 }
-.prof-avatar-edit{position:absolute;right:-4px;bottom:-4px;width:30px;height:30px;border-radius:50%;border:2px solid var(--bg);background:linear-gradient(150deg,#2DD4BF,#14B8A6);color:#04201C;display:grid;place-items:center;cursor:pointer}
+.prof-avatar-edit{position:absolute;right:-4px;bottom:-4px;width:30px;height:30px;border-radius:50%;border:2px solid var(--bg);background:linear-gradient(150deg,#FF6600,#E65C00);color:#FFFFFF;display:grid;place-items:center;cursor:pointer}
 .prof-id-text{padding-bottom:4px}
 .prof-id-text h1{margin:0 0 4px;font-weight:600;font-size:23px;letter-spacing:-.02em}
 .prof-id-text p{margin:0;color:var(--text-mid);font-size:13.5px}
@@ -30,7 +30,7 @@
 .prof-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:20px;font-size:11.5px;font-weight:600;font-family:"IBM Plex Mono"}
 .prof-badge i{width:7px;height:7px;border-radius:50%;background:currentColor}
 .prof-badge.amber{color:var(--amber);background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.28)}
-.prof-badge.teal{color:var(--teal);background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.28)}
+.prof-badge.teal{color:var(--teal);background:rgba(255,102,0,.1);border:1px solid rgba(255,102,0,.28)}
 
 /* body layout */
 .prof-body{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start}

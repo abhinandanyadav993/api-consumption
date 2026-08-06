@@ -8,12 +8,12 @@ function SignalArt() {
     <svg className="auth-signal" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
       <defs>
         <linearGradient id="sigFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#2DD4BF" stopOpacity=".22" />
-          <stop offset="1" stopColor="#2DD4BF" stopOpacity="0" />
+          <stop offset="0" stopColor="#FF6600" stopOpacity=".22" />
+          <stop offset="1" stopColor="#FF6600" stopOpacity="0" />
         </linearGradient>
       </defs>
       <path d={`${path} L 600 200 L 0 200 Z`} fill="url(#sigFill)" />
-      <path className="auth-signal-line" d={path} fill="none" stroke="#2DD4BF" strokeWidth="2.5"
+      <path className="auth-signal-line" d={path} fill="none" stroke="#FF6600" strokeWidth="2.5"
         strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
@@ -26,7 +26,7 @@ export default function AuthLayout({ eyebrow, heading, sub, children }) {
       <aside className="auth-brand">
         <div className="auth-grid-bg" aria-hidden="true" />
         <div className="auth-brand-top">
-          <span className="auth-mark"><Logo size={19} color="#04201C" /></span>
+          <span className="auth-mark"><Logo size={19} color="#FFFFFF" /></span>
           <div className="auth-wordmark">
             <b>Card Console</b><small>APIM · Gateway</small>
           </div>
@@ -59,7 +59,7 @@ export default function AuthLayout({ eyebrow, heading, sub, children }) {
       <main className="auth-panel">
         <div className="auth-form-wrap">
           <div className="auth-mobile-brand">
-            <span className="auth-mark sm"><Logo size={16} color="#04201C" /></span>
+            <span className="auth-mark sm"><Logo size={16} color="#FFFFFF" /></span>
             <b>Card Console</b>
           </div>
           {eyebrow && <p className="auth-form-eyebrow">{eyebrow}</p>}

@@ -5,7 +5,7 @@ export default function TrendChart({
   data,
   max = 900,
   ticks = [0, 300, 600, 900],
-  color = '#2DD4BF',
+  color = '#FF6600',
 }) {
   const gid = useId().replace(/:/g, '')
   const W = 640, H = 260, L = 44, R = 16, T = 18, B = 34

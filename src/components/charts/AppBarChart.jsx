@@ -1,6 +1,6 @@
 import './charts.css'
 
-const DEFAULT_COLORS = ['#2DD4BF', '#34D399', '#5B9DFF', '#A78BFA']
+const DEFAULT_COLORS = ['#FF6600', '#34D399', '#5B9DFF', '#A78BFA']
 
 export default function AppBarChart({ data, colors = DEFAULT_COLORS }) {
   const W = 460, rowH = 26, gap = 6, top = 6, labelW = 118, valW = 42

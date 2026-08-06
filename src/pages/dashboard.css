@@ -1,0 +1,69 @@
+.dash{max-width:var(--maxw);margin:0 auto;padding:28px 24px 64px}
+.dash-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:22px;flex-wrap:wrap}
+.dash-head h1{font-weight:600;font-size:26px;margin:0 0 5px;letter-spacing:-.02em}
+.dash-head p{margin:0;color:var(--text-mid);font-size:13.5px;max-width:64ch}
+.dash-updated{display:flex;align-items:center;gap:8px;color:var(--text-low);font-size:12px;font-family:"IBM Plex Mono"}
+.dash-updated i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(52,211,153,.15)}
+
+/* filters */
+.dash-filter{padding:18px}
+.dash-fgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px 16px}
+.dash-fgrid .field{grid-column:span 3}
+.dash-fgrid .field.span2{grid-column:span 4}
+.dash-adv{grid-column:1/-1;border-top:1px dashed var(--line-2);margin-top:4px;padding-top:18px;display:grid;grid-template-columns:repeat(12,1fr);gap:14px 16px}
+.dash-adv .field{grid-column:span 3}
+.dash-factions{display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+.dash-adv-caret{transition:transform .2s}
+.btn-ghost.open .dash-adv-caret{transform:rotate(180deg)}
+.dash-reset{margin-left:auto;color:var(--text-low);font-size:12.5px;background:none;border:none;cursor:pointer;font-family:"Inter"}
+.dash-reset:hover{color:var(--text-mid)}
+
+/* kpis grid */
+.dash-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:22px 0}
+
+/* charts */
+.dash-charts{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}
+.dash-card-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 6px}
+.dash-card-head.bordered{padding-bottom:14px;border-bottom:1px solid var(--line)}
+.dash-card-head h3{font-weight:600;font-size:15px;margin:0}
+.dash-hint{font-size:11.5px;color:var(--text-low);font-family:"IBM Plex Mono"}
+.dash-legend{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--text-mid)}
+.dash-legend i{width:9px;height:9px;border-radius:3px;display:inline-block}
+.dash-chart{padding:6px 12px 16px}
+
+/* table */
+.dash-table{margin-top:14px}
+.dash-scroll{overflow-x:auto}
+.dash-table table{width:100%;border-collapse:collapse}
+.dash-table thead th{text-align:left;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-low);font-weight:600;padding:12px 18px}
+.dash-table th.num,.dash-table td.num{text-align:right}
+.dash-table tbody td{padding:13px 18px;font-size:13px;border-top:1px solid var(--line)}
+.dash-table tbody tr:hover{background:var(--surface-2)}
+.dash-path{font-family:"IBM Plex Mono";font-size:12.5px;color:var(--text-hi);white-space:nowrap}
+.dash-method{font-family:"IBM Plex Mono";font-size:10px;font-weight:600;padding:2px 6px;border-radius:5px;margin-right:8px}
+.dash-method.get{background:rgba(52,211,153,.14);color:var(--green)}
+.dash-method.post{background:rgba(91,157,255,.14);color:var(--blue)}
+.dash-method.put{background:rgba(167,139,250,.16);color:var(--violet)}
+.dash-tag{font-size:11.5px;color:var(--text-mid)}
+.num{font-family:"IBM Plex Mono";color:var(--text-hi)}
+.dash-rate{display:inline-flex;align-items:center;gap:7px;justify-content:flex-end;font-family:"IBM Plex Mono";font-size:12.5px}
+.dash-rate i{width:7px;height:7px;border-radius:50%}
+.dash-rate.ok{color:var(--green)} .dash-rate.ok i{background:var(--green)}
+.dash-rate.warn{color:var(--amber)} .dash-rate.warn i{background:var(--amber)}
+.dash-rate.bad{color:var(--red)} .dash-rate.bad i{background:var(--red)}
+.dash-foot{padding:12px 18px;color:var(--text-low);font-size:12px;font-family:"IBM Plex Mono";border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.dash-link{color:var(--teal);text-decoration:none;font-family:"Inter";font-size:12.5px;font-weight:500}
+.dash-link:hover{text-decoration:underline}
+
+@media (max-width:1080px){
+  .dash-kpis{grid-template-columns:repeat(2,1fr)}
+  .dash-kpis > .kpi:last-child{grid-column:span 2}
+  .dash-charts{grid-template-columns:1fr}
+  .dash-fgrid .field,.dash-fgrid .field.span2,.dash-adv .field{grid-column:span 6}
+}
+@media (max-width:620px){
+  .dash{padding:20px 14px 48px}
+  .dash-kpis{grid-template-columns:1fr}
+  .dash-kpis > .kpi:last-child{grid-column:span 1}
+  .dash-fgrid .field,.dash-fgrid .field.span2,.dash-adv .field{grid-column:span 12}
+}

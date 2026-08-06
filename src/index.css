@@ -1,0 +1,119 @@
+/* ============================================================
+   Card Console — design system tokens + shared primitives
+   ============================================================ */
+:root{
+  color-scheme:dark;
+  --bg:#0B0E14;
+  --surface-1:#121824;
+  --surface-2:#18202E;
+  --surface-3:#1E2839;
+  --line:#232C3D;
+  --line-2:#2E3A4E;
+  --text-hi:#E9EDF4;
+  --text-mid:#94A2B8;
+  --text-low:#5C6A80;
+  --teal:#2DD4BF;
+  --teal-deep:#14B8A6;
+  --green:#34D399;
+  --amber:#F5A623;
+  --red:#F4526B;
+  --blue:#5B9DFF;
+  --violet:#A78BFA;
+  --on-teal:#04201C;
+  --radius:14px;
+  --radius-sm:10px;
+  --shadow:0 1px 0 rgba(255,255,255,.02) inset, 0 8px 24px -12px rgba(0,0,0,.6);
+  --maxw:1360px;
+}
+
+/* ---- light theme ---- */
+[data-theme="light"]{
+  color-scheme:light;
+  --bg:#F4F6FA;
+  --surface-1:#FFFFFF;
+  --surface-2:#EEF2F7;
+  --surface-3:#E3E9F1;
+  --line:#E4E9F0;
+  --line-2:#D2DBE6;
+  --text-hi:#0E1726;
+  --text-mid:#54617A;
+  --text-low:#8592A6;
+  --teal:#0D9488;
+  --teal-deep:#0F766E;
+  --green:#059669;
+  --amber:#C2620E;
+  --red:#DC2645;
+  --blue:#2563EB;
+  --violet:#7C3AED;
+  --on-teal:#FFFFFF;
+  --shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 6px 22px -14px rgba(15,23,38,.30);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 500px at 15% -8%, rgba(45,212,191,.06), transparent 60%),
+    radial-gradient(1000px 460px at 100% 0%, rgba(91,157,255,.05), transparent 55%),
+    var(--bg);
+  color:var(--text-hi);
+  font-family:"Inter",system-ui,-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:-.005em;
+}
+[data-theme="light"] body{
+  background:
+    radial-gradient(1200px 500px at 15% -8%, rgba(13,148,136,.07), transparent 60%),
+    radial-gradient(1000px 460px at 100% 0%, rgba(37,99,235,.05), transparent 55%),
+    var(--bg);
+}
+a{color:inherit}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-feature-settings:"tnum" 1}
+.display{font-family:"Space Grotesk",sans-serif}
+
+/* theme transition on the elements that change */
+body,.card,.control,.hdr,.hdr-icon,.hdr-profile,.kpi,.prof-tab,.prof-key,.gw-route-card,.auth-panel{
+  transition:background-color .25s ease, border-color .25s ease, color .2s ease;
+}
+
+/* ---- shared primitives ---- */
+.btn{
+  height:44px;padding:0 20px;border-radius:var(--radius-sm);
+  font-size:14px;font-weight:600;font-family:"Inter";cursor:pointer;
+  border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  transition:transform .15s ease, filter .15s ease, border-color .15s ease, color .15s ease, background .15s ease;
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:linear-gradient(150deg,var(--teal),var(--teal-deep));color:var(--on-teal);box-shadow:0 8px 20px -8px rgba(45,212,191,.55)}
+.btn-primary:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-ghost{background:var(--surface-2);border-color:var(--line-2);color:var(--text-mid)}
+.btn-ghost:hover{color:var(--text-hi);border-color:var(--line-2)}
+.btn-block{width:100%}
+
+.field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.field > label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-low);font-weight:600}
+.control{
+  height:44px;border-radius:var(--radius-sm);
+  background:var(--surface-2);border:1px solid var(--line-2);
+  color:var(--text-hi);font-size:14px;font-family:"Inter";
+  padding:0 13px;width:100%;transition:border-color .14s, box-shadow .14s;
+}
+.control::placeholder{color:var(--text-low)}
+.control:hover{border-color:var(--line-2)}
+.control:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(45,212,191,.16)}
+select.control{
+  appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:34px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394A2B8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat:no-repeat;background-position:right 12px center;
+}
+input[type=date].control{font-family:"IBM Plex Mono";font-size:13px}
+
+.card{background:var(--surface-1);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:8px;border:3px solid var(--bg)}
+::-webkit-scrollbar-track{background:transparent}

@@ -1,0 +1,6 @@
+.c-grid line{stroke:var(--line);stroke-width:1}
+.c-axis text{fill:var(--text-low);font-size:10.5px;font-family:"IBM Plex Mono"}
+.c-bar rect{transition:opacity .15s}
+.c-bar:hover rect{opacity:.82}
+.c-barlabel{fill:var(--text-mid);font-size:11px;font-family:"Inter"}
+.c-barval{fill:var(--text-hi);font-size:11px;font-family:"IBM Plex Mono";font-weight:500}
